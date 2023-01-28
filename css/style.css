@@ -455,17 +455,17 @@ h6,
 .section-title::before {
     position: absolute;
     content: "";
-    width: 150px;
-    height: 5px;
-    left: 0;
-    bottom: 0;
+    inline-size: 150px;
+    block-size: 5px;
+    inset-inline-start: 0;
+    inset-block-end: 0;
     background: var(--primary);
     border-radius: 2px;
 }
 
 .section-title.text-center::before {
-    left: 50%;
-    margin-left: -75px;
+    inset-inline-start: 50%;
+    margin-inline-start: -75px;
 }
 
 .section-title.section-title-sm::before {
@@ -564,6 +564,9 @@ h6,
 .team-item {
     transition: .5s;
 }
+.team-img img{
+    border-radius: 50%;
+}
 
 .team-social {
     position: absolute;
@@ -589,7 +592,7 @@ h6,
 }
 
 .team-item:hover .team-social {
-    background: rgba(9, 30, 62, .7);
+    filter: saturate(0)
 }
 
 .team-item:hover .team-social a.btn:first-child {
@@ -621,10 +624,7 @@ h6,
     transition: .5s;
 }
 
-.team-item:hover .team-img img,
-.blog-item:hover .blog-img img {
-    transform: scale(1.15);
-}
+
 
 
 /*** Miscellaneous ***/
