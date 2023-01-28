@@ -526,8 +526,8 @@ h6,
     position: relative;
     display: inline-block;
     margin: 0 5px;
-    width: 15px;
-    height: 15px;
+    inline-size: 15px;
+    block-size: 15px;
     background: #DDDDDD;
     border-radius: 2px;
     transition: .5s;
@@ -627,7 +627,11 @@ h6,
 .blog-item .blog-img img  {
     transition: .5s;
 }
-
+.owl-carousel img {
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {
