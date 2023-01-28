@@ -625,7 +625,11 @@ h6,
 }
 
 
-
+.owl-carousel img {
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {
