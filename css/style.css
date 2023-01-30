@@ -393,7 +393,7 @@ h6,
     inline-size: 100%;
    padding: 0;
     text-align: center;
-    background: rgba(0, 0, 0, .09);
+    background: rgba(0, 0, 0, .07);
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
     transition: .5s;
     z-index: 2;
@@ -420,7 +420,6 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .09);
 
 
     /* box-shadow: 0 0 45px rgba(0, 0, 0, .5); */
@@ -447,7 +446,7 @@ h6,
 
 .service-item:hover .service-btn {
     inset-block-end: -1rem;
-    background: #FFFFFF;
+   
 }
 
 
@@ -623,9 +622,15 @@ h6,
     transition: .3s .15s;
 } */
 
-.team-item .team-img img,
+.team-item .team-img img
+{
+    transition: .5s;
+}
 .blog-item .blog-img img  {
     transition: .5s;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+
 }
 .owl-carousel img {
     border-radius: 50%;
@@ -645,8 +650,8 @@ h6,
 .back-to-top {
     position: fixed;
     /* display: none; */
-    right: 45px;
-    bottom: 45px;
+    inset-inline-end: 45px;
+    inset-block-end: 45px;
     z-index: 99;
 }
 
@@ -660,7 +665,7 @@ h6,
 }
 
 .link-animated a:hover {
-    padding-left: 10px;
+    padding-inline-start: 10px;
 }
 
 @media (min-width: 767.98px) {
