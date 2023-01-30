@@ -438,7 +438,7 @@ h6,
     block-size: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 4px 80px 4px 80px;
+    border-radius: 100px 10px 100px 10px;
     
 
 }
@@ -535,6 +535,7 @@ h6,
 .testimonial-carousel .owl-dot.active {
     width: 30px;
     background: var(--dark);
+    border-radius: 100px 10px 100px 10px;
 }
 
 .testimonial-carousel .owl-item.center {
@@ -555,7 +556,8 @@ h6,
     background: var(--dark) !important;
     /* box-shadow: 0 0 30px #DDDDDD; */
       box-shadow: 0 0 45px rgba(0, 0, 0, .3);
-      border-radius: 20px;
+      border-radius: 100px 10px 100px 10px;
+
 }
 
 
