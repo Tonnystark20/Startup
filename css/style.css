@@ -162,6 +162,7 @@ h6,
     border-color: var(--primary) !important;
 }
 
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
         position: relative;
@@ -693,6 +694,15 @@ h6,
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+}
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("../images/sunset.jpg");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem)
 }
 
 /*** Miscellaneous ***/
