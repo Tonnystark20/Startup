@@ -301,6 +301,11 @@ h6,
     background-size: cover;
 }
 
+.about2 {
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../images/sunset.jpg) left center no-repeat;
+    background-size: cover;
+}
+
 .btn-play {
     position: relative;
     display: block;
@@ -695,6 +700,7 @@ h6,
     justify-content: center;
     align-items: center;
 }
+
 .was-validated .form-control:valid,
 .form-control.is-valid {
     border-color: #198754;
