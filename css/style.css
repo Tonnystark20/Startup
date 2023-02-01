@@ -233,7 +233,7 @@ h6,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .36);
     z-index: 1;
 }
 
