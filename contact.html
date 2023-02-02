@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -186,7 +187,7 @@
                                 <h3 class="mb-0">Fill your details</h3>
                             </div>
                         </div>
-                    <form action="https://formspree.io/f/mbjelpjg" method="post">
+                    <form action="https://formspree.io/f/mbjelpjg" method="post" >
                         <div class="row g-3">
                             <div class="col-md-6">
                                 
@@ -196,10 +197,15 @@
                                 <input type="email"  name= "Email"class="form-control border-0 bg-light px-4" placeholder="Your Email" style="block-size: 55px;" required>
                             </div>
                             <div class="col-12">
-                                <input type="text" name="Subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="block-size: 55px;" required>
+                                <input type="tel"  id="phone" name="phone" class="form-control bg-light border-0" pattern= "[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your Phone Number" style="block-size: 55px;" required>
+
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0 bg-light px-4 py-3" name= "Message" rows="8" placeholder="Message"></textarea >
+                                <input type="text" name="Subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="block-size: 55px;" required>
+                            </div>
+
+                            <div class="col-12">
+                                <textarea class="form-control border-0 bg-light px-4 py-3" name= "Message" rows="8" placeholder="Message" required></textarea >
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
@@ -356,7 +362,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+  
 
 
     <script src="js/sweetalert2.all.min.js"></script>
@@ -365,6 +371,8 @@
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     <!-- Template Javascript -->
+ 
+ 
     <script src="js/main.js"></script>
 </body>
 
