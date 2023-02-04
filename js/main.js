@@ -144,7 +144,7 @@ function validateEmail(inputText) {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (inputText.value.match(mailformat)) {
         Swal.fire({
-            text: ' Thank you for Subscribing!'
+            text: ' Welcome To Afro Beta Consult!'
         })
     }
     else {
