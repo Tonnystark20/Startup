@@ -187,7 +187,7 @@ const data = [
     { name: "Our Services", url: "service.html#services" },
     { name: "Peter Simboni ", url: "testimonial.html" },
     { name: "Solutions at AfroBeta Consult", url: "services.html" },
-    { name: "Our Contacts", url: "contact.html#email" },
+    { name: "Our Contacts", url: "contact.html" },
     { name: "Our Clients", url: "index.html#clients" },
     { name: "Our Mobile Number", url: "contact.html#email" },
     { name: "Recent Posts", url: "blog.html#recent" },
