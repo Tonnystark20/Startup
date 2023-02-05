@@ -124,16 +124,24 @@
                 <div class="modal-header border-0">
                     <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-inline-size: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
+                <div class="wrapper">
+                    <div class="searchinput">
+                      <!-- <a href="" target="_blank" hidden></a> -->
+                      <input type="text" id="search-input"  placeholder="Type to search..">
+                      <ul id="suggestion-list" class="suggestion-list">
+                        <!-- here list are  inserted from javascript -->
+                     
+                     
+                    </ul>  
+                 
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
             </div>
         </div>
     </div>
     <!-- Full Screen Search End -->
+
 
 
   
@@ -151,7 +159,7 @@
             </div>
             <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="bg-white rounded-top p-5 mt-lg-5">
-                    <p class="fs-5 fw-medium text-primary">ABOUT US</p>
+                    <p class="fs-5 fw-medium text-primary" id="about">ABOUT US</p>
                     <h1 class="display-6 mb-4">A Lead Consultant on Professional Growth & Group Engagement</h1>
                     <p class="mb-4">AfroBeta specializes in helping organizations at different levels in establishing cultures and processes that boost productivity and professional satisfaction.  
                         We leverage creativity and design to enhance individual participation and harness collective success.</p>
@@ -284,6 +292,10 @@
     <!-- Vendor Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5 mb-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-inline-size: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase" >Our Clients </h5>
+                <h1 class="mb-0">Some of Our Clients</h1>
+            </div>
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
                     <img src="images/kean.png" alt="">

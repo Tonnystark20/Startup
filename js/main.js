@@ -156,64 +156,76 @@ function validateEmail(inputText) {
 }
 
 
-//autocomplete suggestion
 
-const searchWrapper = document.querySelector(".search-input");
-const inputBox = searchWrapper.querySelector("input");
-const suggBox = searchWrapper.querySelector(".autocom-box");
-const icon = searchWrapper.querySelector(".icon");
-let linkTag = searchWrapper.querySelector("a");
-let webLink;
 
-// if user press any key and release
-inputBox.onkeyup = (e) => {
-    let userData = e.target.value; //user enetered data
-    let emptyArray = [];
-    if (userData) {
-        icon.onclick = () => {
-            webLink = `https://www.google.com/search?q=${userData}`;
-            linkTag.setAttribute("href", webLink);
-            linkTag.click();
-        }
-        emptyArray = suggestions.filter((data) => {
-            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-        });
-        emptyArray = emptyArray.map((data) => {
-            // passing return data inside li tag
-            return data = `<li>${data}</li>`;
-        });
-        searchWrapper.classList.add("active"); //show autocomplete box
-        showSuggestions(emptyArray);
-        let allList = suggBox.querySelectorAll("li");
-        for (let i = 0; i < allList.length; i++) {
-            //adding onclick attribute in all li tag
-            allList[i].setAttribute("onclick", "select(this)");
-        }
-    } else {
-        searchWrapper.classList.remove("active"); //hide autocomplete box
+
+const data = [
+    { name: "Location of AfroBeta", url: "contact.html#location" },
+    { name: "AfroBeta Consult Offices", url: "contact.html#location" },
+    { name: "Team members of AfroBeta", url: "team.html" },
+    { name: "Founder of AfroBeta Consult", url: "team.html#founder" },
+    { name: "Our Services", url: "service.html#services" },
+    { name: "Email of AfroBeta", url: "contact.html#email" },
+    { name: "How to get in touch with AfroBeta", url: "contact.html" },
+    { name: "Blog Page1", url: "blog.html" },
+    { name: "Blog Page2", url: "blog2.html" },
+    { name: "Latest Blogs", url: "index.html#blog" },
+    { name: "Alvin Rita", url: "team.html#Nyaga" },
+    { name: "Nyaga", url: "team.html#Nyaga" },
+    { name: "Marumbu", url: "team.html#founder" },
+    { name: "Susan Makori", url: "team.html#kwamboka" },
+    { name: "Kwamboka", url: "team.html#kwamboka" },
+    { name: " Enquiry ", url: "quote.html" },
+    { name: "Solutions at AfroBeta Consult", url: "services.html" },
+    { name: "Testimonials ", url: "testimonial.html" },
+    { name: "Peter Simboni ", url: "testimonial.html" },
+    { name: "Francis Wainaina", url: "testimonial.html" },
+    { name: "Terry", url: "testimonial.html#terry" },
+    { name: "Jonathan Githire", url: "testimonial.html" },
+    { name: "About AfroBeta Consult", url: "about.html" },
+    { name: "Our Contacts", url: "contact.html#email" },
+    { name: "Our Clients", url: "index.html#clients" },
+    { name: "Our Mobile Number", url: "contact.html#email" },
+    { name: "Afro Beta Vision", url: "feature.html#vision" },
+    { name: "Afro Beta Mission", url: "feature.html#mission" },
+    { name: "Afro Beta Values", url: "feature.html#values" },
+    { name: "Why Afrobeta Consult", url: "feature.html" },
+    { name: "Creative Director AfroBeta Consult", url: "team.html#Nyaga" },
+    { name: "C.O.O Afrobeta Consult", url: "team.html#kwamboka" },
+    { name: "Facilitation at AfroBeta Consult", url: "service.html#facilitation" },
+    { name: "Training at AfroBeta Consult", url: "service.html#training" },
+    { name: "Consultation at AfroBeta Consult", url: "service.html#consultation" },
+    { name: "Taifa Teule Leadership Experience", url: "blog.html#teule" },
+    { name: "Shiriki", url: "blog2.html#teule" },
+    { name: "Recent Posts", url: "blog.html#recent" },
+
+
+];
+
+const input = document.getElementById("search-input");
+const suggestionList = document.getElementById("suggestion-list");
+const searchIcon = document.querySelector(".icon ");
+
+input.addEventListener("input", e => {
+    const filteredData = data.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()));
+    suggestionList.innerHTML = filteredData.map(item => `<li data-url="${item.url}">${item.name}</li>`).join("");
+});
+
+suggestionList.addEventListener("click", e => {
+    if (e.target.tagName === "LI") {
+        input.value = e.target.textContent;
     }
-}
+});
 
-function select(element) {
-    let selectData = element.textContent;
-    inputBox.value = selectData;
-    icon.onclick = () => {
-        webLink = `https://www.google.com/search?q=${selectData}`;
-        linkTag.setAttribute("href", webLink);
-        linkTag.click();
+searchIcon.addEventListener("click", () => {
+    const selectedItem = data.find(item => item.name === input.value);
+    if (selectedItem) {
+        window.location = selectedItem.url;
     }
-    searchWrapper.classList.remove("active");
-}
+});
 
-function showSuggestions(list) {
-    let listData;
-    if (!list.length) {
-        userValue = inputBox.value;
-        listData = `<li>${userValue}</li>`;
-    } else {
-        listData = list.join('');
-    }
-    suggBox.innerHTML = listData;
-}
+
+
+
+
 
