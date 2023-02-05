@@ -51,6 +51,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 
     <!-- Template Stylesheet -->
  
@@ -211,12 +213,75 @@
                 <div class="modal-header border-0">
                     <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-inline-size: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
+                <div class="wrapper">
+                    <div class="search-input">
+                      <a href="" target="_blank" hidden></a>
+                      <input type="text" id="mySearch"  placeholder="Type to search..">
+                      <div class="autocom-box" >
+                        <!-- here list are  inserted from javascript -->
+                       
+                        <li><a href="contact.html"></a>Our Location</li>
+                        <li><a href="contact.html"></a>Our Contacts</li>
+                       <li> <a href="blog.html"></a>Six key factors to consider during a facilitation experience</li>
+                        <li> <a href="blog.html"> </a> 5 factors to consider when managing energy during training or facilitation</li>
+                        <li><a href="blog.html"></a>5 Hacks for sparking participation during training and facilitation</li>
+                        <li>  <a href="blog.html"></a>Participants are using their phones too much!</li>
+                       <!-- <a href=""> <li>Recruitment tips for your community program</li></a> 
+                       <a href=""> <li> Jonathan Githire</li></a> 
+                       <a href="testimonial.html"> <li>Francis Wainaina</li></a> 
+                       <a href=""> <li>Terry</li></a> 
+                       <a href="testimonial.html"> <li>Peter Simboni</li></a> 
+                       <a href=""> <li>Testimonials About AfroBeta Consult</li></a> 
+                       <a href=""> <li>Our solutions at AfroBeta Consult</li></a> 
+                       <a href=""> <li>Quick Enquiry to AfroBeta Consult</li></a> 
+                       <a href="about.html"> <li>About AfroBeta Consult</li></a> 
+                       <a href=""> <li>Our Team</li></a> 
+                       <a href=""> <li>Our Services</li></a> 
+                       <a href=""> <li>Contacts of AfroBeta Consult</li></a> 
+                       <a href=""> <li>Features of AfroBeta Consult</li></a> 
+                       <a href=""> <li>Susan Makori Kwamboka</li></a> 
+                       <a href=""> <li>Emmanuel Misiati</li></a> 
+                       <a href=""> <li> Alvin Rita</li></a> 
+                       <a href=""> <li>Blog Section</li></a> 
+                       <a href=""> <li>Email of AfroBeta</li></a> 
+                       <a href="team.html"> <li>Team members of AfroBeta</li></a> 
+                       <a href=""> <li> Founder of AfroBeta</li></a> 
+                       <a href=""> <li>Location of AfroBeta</li></a> 
+                       <a href=""> <li>  AfroBeta Consult Offices</li></a> 
+                       <a href=""> <li>Consultation at AfroBeta Consult</li></a> 
+                       <a href=""> <li>AfroBeta Clients</li></a> 
+                       <a href=""> <li>Faciltation</li></a> 
+                       <a href=""> <li>Consultaion </li></a> 
+                       <a href=""> <li>Training </li></a> 
+                       <a href=""> <li>Training at AfroBeta Consult</li></a> 
+                       <a href=""> <li>Facilitation at AfroBeta Consult</li></a> 
+                       <a href=""> <li>C.O.O Susan Kwamboka Makori</li></a> 
+                       <a href=""> <li>Founder Emmanuel Misiati</li></a> 
+                       <a href=""> <li>Creative Director Alvin Rita</li></a> 
+                       <a href=""> <li>Our Blog Posts</li></a> 
+                       <a href=""> <li>Our Latest Blog Articles</li></a> 
+                       <a href=""> <li> Our Values</li></a> 
+                       <a href=""> <li>Why Afrobeta Consult</li></a> 
+                       <a href=""> <li>Our Mission</li></a> 
+                       <a href=""> <li>Our Vision</li></a> 
+                       <a href=""> <li>Our Email</li></a> 
+                       <a href=""> <li>  Taifa Teule Leadership Experience</li></a> 
+                       <a href=""> <li>  Our Mobile Number</li></a> 
+                       <a href=""> <li> TEACHER! TEACHER! Three simple reasons why you are a good one </li></a> 
+                       <a href=""> <li> 4 Simple ways of preparing to facilitate a group session effectively</li></a> 
+                       <a href=""> <li>   5 Simple steps to building a great team within a short period of time</li></a> 
+                       <a href=""> <li>  ENGAGE. What is something you have been thinking of doing?</li></a> 
+                       <a href=""> <li> Tips for Highly Effective Recruitment Calls for a Volunteer Program </li></a> 
+                       <a href=""> <li> Once is Never Enough; A Facilitator’s Experience</li></a> 
+                       <a href=""> <li> Recent Posts</li></a> 
+                       <a href=""> <li> Misiati</li></a> 
+                       <a href=""> <li> Nyaga</li></a> 
+                       <a href=""> <li> Makori</li></a> 
+                -->
+                 </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
             </div>
         </div>
     </div>
@@ -955,7 +1020,8 @@
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     <!-- Template Javascript -->
-  
+    
+    <script src="js/suggestions.js"></script>
     <script src="js/main.js"></script>
 </body>
 
