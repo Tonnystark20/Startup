@@ -241,4 +241,3 @@ searchIcon.addEventListener("click", () => {
 
 
 
-
