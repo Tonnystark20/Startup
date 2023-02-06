@@ -29,6 +29,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <script>
+        function speakMessage() {
+          responsiveVoice.speak(' At AfroBeta ,  we spread our gospel with pride and openness. It is our magnificent truth.Read our blogs and thanks for your readership. Remember to Leave a comment and share our gospel', 'UK English Female');
+        }
+      </script>
 </head>
 
 <body>
@@ -99,7 +106,7 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                <a href="contact.html" class="btn btn-primary py-2 px-4 ms-3">Let's Talk</a>
+                <a href="#" class="btn btn-primary py-2 px-4 ms-3"onclick="speakMessage();"> Message</a>
             </div>
         
         </nav>

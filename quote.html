@@ -29,6 +29,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <script>
+        function speakMessage() {
+          responsiveVoice.speak(' For any enquiry , just fill in the form below and we will respond on time or you can easily call us on 0707136869', 'UK English Female');
+        }
+      </script>
   
 </head>
 
@@ -100,7 +107,8 @@
                     <a href="contact.html" class="nav-item nav-link ">Contact</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                <a href="contact.html" class="btn btn-primary py-2 px-4 ms-3">Let's Talk</a>
+                <a href="#" class="btn btn-primary py-2 px-4 ms-3"onclick="speakMessage();"> Message</a>
+
             </div>
         </nav>
 

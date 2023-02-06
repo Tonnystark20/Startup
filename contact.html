@@ -29,6 +29,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <script>
+        function speakMessage() {
+          responsiveVoice.speak('We would love to hear from you. For support or any queries  get in touch with us by filling in the form below. You can also reach us on 0707136869 or send us an email to the address  facilitatormisiati at gmail dot com', 'UK English Female');
+        }
+      </script>
     
 </head>
 
@@ -99,7 +106,7 @@
                     <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                <a href="contact.html" class="btn btn-primary py-2 px-4 ms-3">Let's Talk</a>
+                <a href="#" class="btn btn-primary py-2 px-4 ms-3"onclick="speakMessage();"> Message</a>
             </div>
         </nav>
 

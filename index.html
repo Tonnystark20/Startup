@@ -62,8 +62,15 @@
      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
    />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+   <script>
+     function speakMessage() {
+       responsiveVoice.speak('Welcome to Afro Beta Consult where our vision is to create  a world of resourceful individuals. Our mission to enable teams explore individual and collective potential', 'UK English Female');
+     }
+   </script>
    
 </head>
+
 
 <body>
     <!-- Spinner Start -->
@@ -132,7 +139,7 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                <a href="contact.html" class="btn btn-primary py-2 px-4 ms-3">Let's Talk</a>
+                <a href="#" class="btn btn-primary py-2 px-4 ms-3"onclick="speakMessage();"> Message</a>
             </div>
         </nav>
   <!-- Carousel Start -->
