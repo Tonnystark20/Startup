@@ -210,6 +210,7 @@ const suggestionList = document.getElementById("suggestion-list");
 const searchIcon = document.querySelector(".icon ");
 
 input.addEventListener("input", e => {
+    suggestionList.style.display = "block";
     const filteredData = data.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()));
     suggestionList.innerHTML = filteredData.map(item => `<li data-url="${item.url}">${item.name}</li>`).join("");
 });
@@ -217,6 +218,7 @@ input.addEventListener("input", e => {
 suggestionList.addEventListener("click", e => {
     if (e.target.tagName === "LI") {
         input.value = e.target.textContent;
+        suggestionList.style.display = "none";
     }
 });
 
