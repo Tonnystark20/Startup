@@ -272,17 +272,22 @@ if (savedState.isPlaying) {
 } else {
     playBtn.innerHTML = '<span class="pause-icon"></span>';
 }
-
 playBtn.addEventListener("click", function () {
-    if (player.paused) {
-        player.play();
-        playBtn.innerHTML = '<span></span>';
-        savedState.isPlaying = true;
-    } else {
-        player.pause();
-        playBtn.innerHTML = '<span class="pause-icon"></span>';
-        savedState.isPlaying = false;
+    switch (true) {
+        case player.paused:
+            player.play();
+            playBtn.innerHTML = '<span></span>';
+            savedState.isPlaying = true;
+            break;
+        default:
+            player.pause();
+            playBtn.innerHTML = '<span class="pause-icon"></span>';
+            savedState.isPlaying = false;
+            break;
     }
+
+    // Save the current state to localStorage
+    localStorage.setItem("musicState", JSON.stringify(savedState));
 });
 
 player.addEventListener("ended", function () {
