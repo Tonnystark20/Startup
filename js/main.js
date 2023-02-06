@@ -238,7 +238,6 @@ searchIcon.addEventListener("click", () => {
 });
 
 
-
 const player = document.getElementById("player");
 const playBtn = document.getElementById("playBtn");
 let currentSong = 0;
@@ -248,8 +247,8 @@ let songList = [
     "/img/Wild Dreams.mp3"
 ];
 
-// Retrieve the saved state from localStorage
-let savedState = localStorage.getItem("musicState");
+// Retrieve the saved state from sessionStorage
+let savedState = sessionStorage.getItem("musicState");
 if (savedState) {
     savedState = JSON.parse(savedState);
     player.currentTime = savedState.currentTime;
@@ -284,9 +283,6 @@ playBtn.addEventListener("click", function () {
         playBtn.innerHTML = '<span class="pause-icon"></span>';
         savedState.isPlaying = false;
     }
-
-    // Save the current state to localStorage
-    localStorage.setItem("musicState", JSON.stringify(savedState));
 });
 
 player.addEventListener("ended", function () {
@@ -300,13 +296,10 @@ player.addEventListener("ended", function () {
     // Update the saved state
     savedState.currentTime = 0;
     savedState.currentSong = currentSong;
-    localStorage.setItem("musicState", JSON.stringify(savedState));
 });
 
 window.addEventListener("beforeunload", function () {
-    // Save the current state to localStorage
+    // Save the current state to sessionStorage
     savedState.currentTime = player.currentTime;
-    localStorage.setItem("musicState", JSON.stringify(savedState));
+    sessionStorage.setItem("musicState", JSON.stringify(savedState));
 });
-
-
