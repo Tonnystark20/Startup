@@ -287,69 +287,34 @@
             <div class="col-lg-6">
                 <div class="h-100 d-flex align-items-center justify-content-center" style="min-block-size: 300px;">
                     <audio id="player">
-                        <audio id="player">
-                            <source src="/img/Wherever.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio>
-                          
-                          <button id="playBtn" type="button" class="btn-play">
-                            <span></span>
-                          </button>
-                          
-                          <script>
-                            const player = document.getElementById("player");
-                            const playBtn = document.getElementById("playBtn");
-                            const audioFiles = [
-                              "/img/Wherever.mp3",
-                              "/img/Castle On The Hill.mp3",
-                              "/img/Wild Dreams.mp3",
-                            ];
-                            let currentAudioIndex = 0;
-                          
-                            function playAudio() {
-                              player.src = audioFiles[currentAudioIndex];
-                              player.play();
-                              playBtn.innerHTML = '<span></span>';
-                            }
-                          
-                            function nextAudio() {
-                              currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
-                              playAudio();
-                            }
-                          
-                            playBtn.addEventListener("click", function() {
-                              if (player.paused) {
-                                player.play();
-                                playBtn.innerHTML = '<span></span>';
-                              } else {
-                                player.pause();
-                                playBtn.innerHTML = '<span class="pause-icon"></span>';
-                              }
-                            });
-                          
-                            player.addEventListener("ended", function() {
-                              nextAudio();
-                            });
-                          
-                            // Load the state of the audio player from local storage
-                            window.addEventListener("load", function() {
-                              if (localStorage.getItem("playerState") === "paused") {
-                                player.pause();
-                                playBtn.innerHTML = '<span class="pause-icon"></span>';
-                              } else {
-                                playAudio();
-                              }
-                          
-                              currentAudioIndex = parseInt(localStorage.getItem("currentAudioIndex")) || 0;
-                            });
-                          
-                            // Save the state of the audio player to local storage
-                            window.addEventListener("beforeunload", function() {
-                              localStorage.setItem("playerState", player.paused ? "paused" : "playing");
-                              localStorage.setItem("currentAudioIndex", currentAudioIndex);
-                            });
-                          </script>
-                          
+                        <source src="/img/Castle On The Hill.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                      
+                      <button id="playBtn" type="button" class="btn-play">
+                        <span></span>
+                      </button>
+                      
+                      <script>
+                        const player = document.getElementById("player");
+                        const playBtn = document.getElementById("playBtn");
+                      
+                        playBtn.addEventListener("click", function() {
+                          if (player.paused) {
+                            player.play();
+                            playBtn.innerHTML = '<span></span>';
+                          } else {
+                            player.pause();
+                            playBtn.innerHTML = '<span class="pause-icon"></span>';
+                          }
+                        });
+                      
+                        player.addEventListener("ended", function() {
+                          player.currentTime = 0;
+                          player.play();
+                        });
+                      </script>
+                        
                       
                                         
                     <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
