@@ -226,6 +226,10 @@ h6,
 
 
 
+.none {
+    display: none;
+}
+
 .wrapper {
 
     max-inline-size: 450px;

@@ -239,5 +239,74 @@ searchIcon.addEventListener("click", () => {
 
 
 
+const player = document.getElementById("player");
+const playBtn = document.getElementById("playBtn");
+let currentSong = 0;
+let songList = [
+    "/img/Wherever.mp3",
+    "/img/Castle On The Hill.mp3",
+    "/img/Wild Dreams.mp3"
+];
+
+// Retrieve the saved state from localStorage
+let savedState = localStorage.getItem("musicState");
+if (savedState) {
+    savedState = JSON.parse(savedState);
+    player.currentTime = savedState.currentTime;
+    currentSong = savedState.currentSong;
+} else {
+    // Use default values
+    savedState = {
+        currentTime: 0,
+        currentSong: 0,
+        isPlaying: false
+    };
+}
+
+// Update the player source
+player.src = songList[currentSong];
+
+// Update the play button
+if (savedState.isPlaying) {
+    player.play();
+    playBtn.innerHTML = '<span></span>';
+} else {
+    playBtn.innerHTML = '<span class="pause-icon"></span>';
+}
+
+playBtn.addEventListener("click", function () {
+    if (player.paused) {
+        player.play();
+        playBtn.innerHTML = '<span></span>';
+        savedState.isPlaying = true;
+    } else {
+        player.pause();
+        playBtn.innerHTML = '<span class="pause-icon"></span>';
+        savedState.isPlaying = false;
+    }
+
+    // Save the current state to localStorage
+    localStorage.setItem("musicState", JSON.stringify(savedState));
+});
+
+player.addEventListener("ended", function () {
+    currentSong++;
+    if (currentSong >= songList.length) {
+        currentSong = 0;
+    }
+    player.src = songList[currentSong];
+    player.play();
+
+    // Update the saved state
+    savedState.currentTime = 0;
+    savedState.currentSong = currentSong;
+    localStorage.setItem("musicState", JSON.stringify(savedState));
+});
+
+window.addEventListener("beforeunload", function () {
+    // Save the current state to localStorage
+    savedState.currentTime = player.currentTime;
+    localStorage.setItem("musicState", JSON.stringify(savedState));
+});
 
 
