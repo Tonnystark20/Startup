@@ -243,8 +243,8 @@ const playBtn = document.getElementById("playBtn");
 let currentSong = 0;
 let songList = [
     "/img/Wherever.mp3",
-    // "/img/Castle On The Hill.mp3",
-    // "/img/Wild Dreams.mp3"
+    "/img/Castle On The Hill.mp3",
+    "/img/Wild Dreams.mp3"
 ];
 
 // Retrieve the saved state from sessionStorage
