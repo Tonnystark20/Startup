@@ -344,6 +344,24 @@ h6,
 
     color: #FFFFFF;
 } */
+#whatsapp-chat {
+    position: fixed;
+    inset-inline-start: 70px;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+.fa-whatsapp {
+    font-size: 40px;
+    color: #06A3DA;
+
+}
+
 
 
 

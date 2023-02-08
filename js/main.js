@@ -238,3 +238,25 @@ searchIcon.addEventListener("click", () => {
 });
 
 
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    var whtasappChat = $("#whatsapp-chat");
+
+    if (scroll >= 100) {
+        whtasappChat.addClass("fixed");
+    } else {
+        whtasappChat.removeClass("fixed");
+    }
+});
+
+
+const textButtons = document.
+    querySelectorAll('#whatsapp-chat');
+
+textButtons.forEach(textButton => {
+    let text = textButton.querySelector('p');
+
+    text.innerHTML = text.innerHTML.split('').map
+        ((character, index) =>
+            `<span style="transform: rotate(${index * 18}deg)">${character}</span>`).join('')
+})
