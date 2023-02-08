@@ -346,21 +346,18 @@ h6,
 } */
 #whatsapp-chat {
     position: fixed;
-    inset-inline-start: 40px;
-    inset-block-start: 50%;
-    transform: translateY(-50%);
-
-    align-items: center;
-    justify-content: center;
-
-    z-index: 99999;
+    left: 45px;
+    top: 85%;
+    text-align: center;
+    z-index: 9999;
 }
 
 .fa-whatsapp {
-    font-size: 40px;
-    color: #06A3DA;
-
+    font-size: 50px;
+    color: #52e542;
 }
+
+
 
 
 
@@ -866,8 +863,11 @@ h6,
     /* display: none; */
     inset-inline-end: 45px;
     inset-block-end: 45px;
-    z-index: 99;
+    z-index: 999999;
 }
+
+
+
 
 .bg-header {
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/IMG_1555.jpg) center center no-repeat;
