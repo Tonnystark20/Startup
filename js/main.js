@@ -51,6 +51,21 @@
             $dropdown.off("mouseenter mouseleave");
         }
     });
+    // logo switch up when scroll to top
+    var mq = window.matchMedia("(min-width: 768px)");
+
+    if (mq.matches) {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var logo = $("nav .navbar-brand img");
+
+            if (scroll > 0) {
+                logo.attr("src", "images/Final Logo 1.png");
+            } else {
+                logo.attr("src", "images/Final Logo 2.png");
+            }
+        });
+    }
 
 
     // Facts counter
