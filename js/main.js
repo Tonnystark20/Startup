@@ -52,7 +52,7 @@
         }
     });
     // logo switch up when scroll to top
-    var mq = window.matchMedia("(min-width: 768px)");
+    var mq = window.matchMedia("(min-width: 992px)");
 
     if (mq.matches) {
         $(window).scroll(function () {
