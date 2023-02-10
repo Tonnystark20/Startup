@@ -136,14 +136,13 @@
 })(jQuery);
 
 const email = document.getElementById('mce-EMAIL')
-const name = document.getElementById('mce-FNAME')
 const change = document.getElementById('change');
 const button = document.getElementById('mc-embedded-subscribe');
 
 button.onclick = function () {
-    if (name.value === '' || email.value === '') {
+    if (email.value === '') {
         Swal.fire({
-            text: ' Name and Email Required!'
+            text: ' Email Required!'
         })
         return false
     } else {
