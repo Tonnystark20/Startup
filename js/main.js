@@ -51,7 +51,17 @@
             $dropdown.off("mouseenter mouseleave");
         }
     });
-    // logo switch up when scroll to top
+    // whatsapp switch up when scroll to top and scroll to bottom
+    // JavaScript
+    window.onscroll = function () {
+        clearTimeout(timer);
+        var timer = setTimeout(function () {
+            document.getElementById("whatsapp-chat").style.display = "block";
+        }, 900);
+        document.getElementById("whatsapp-chat").style.display = "none";
+    };
+
+
 
 
     // Facts counter

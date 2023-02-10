@@ -336,17 +336,16 @@ h6,
 
 #whatsapp-chat {
     position: fixed;
-    left: 45px;
-    top: 85%;
+    left: 35px;
+    top: 85.1%;
     text-align: center;
     z-index: 9999;
 }
 
 .fa-whatsapp {
     font-size: 50px;
-    color: #52e542;
+    color: #06A3DA;
 }
-
 
 
 
