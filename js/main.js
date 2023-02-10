@@ -249,6 +249,3 @@ searchIcon.addEventListener("click", () => {
         window.location = selectedItem.url;
     }
 });
-
-
-
