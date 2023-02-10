@@ -288,3 +288,19 @@ function dragMoveListener(event) {
     target.setAttribute("data-x", x);
     target.setAttribute("data-y", y);
 }
+function dragMoveListener(event) {
+    var target = event.target;
+    var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+    var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+    var maxTop = 0.4 * window.innerHeight;
+
+    // limit the top position to 40% of the screen
+    y = Math.min(y, maxTop);
+
+    target.style.webkitTransform = target.style.transform =
+        "translate(" + x + "px, " + y + "px)";
+
+    target.setAttribute("data-x", x);
+    target.setAttribute("data-y", y);
+}
+
