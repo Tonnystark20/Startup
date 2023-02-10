@@ -62,6 +62,9 @@
     };
 
 
+    window.onload = function () {
+        document.getElementById("whatsapp-chat").style.display = "block";
+    };
 
 
     // Facts counter
