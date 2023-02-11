@@ -1,20 +1,16 @@
-// Select the link or button that triggers the scroll
-const scrollTrigger = document.querySelector('.navbar-brand');
+let scrollSpeed = 4; // Set the default scrolling speed
 
-// Add a click event listener to the trigger
-scrollTrigger.addEventListener('click', function (e) {
-    e.preventDefault();
+window.addEventListener("wheel", function (event) {
+    // Calculate the scrolling speed based on the deltaY property of the event object
+    let speed = event.deltaY > 0 ? scrollSpeed : -scrollSpeed;
 
-    // Calculate the target position of the scroll
-    const target = document.querySelector('#target-element');
-    const targetPosition = target.offsetTop;
+    // Prevent the default scrolling behavior
+    event.preventDefault();
 
-    // Animate the scroll to the target position
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-    });
+    // Scroll the webpage by the calculated speed
+    window.scrollBy(0, speed);
 });
+
 
 
 
