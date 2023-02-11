@@ -1,3 +1,23 @@
+// Select the link or button that triggers the scroll
+const scrollTrigger = document.querySelector('.navbar-brand');
+
+// Add a click event listener to the trigger
+scrollTrigger.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Calculate the target position of the scroll
+    const target = document.querySelector('#target-element');
+    const targetPosition = target.offsetTop;
+
+    // Animate the scroll to the target position
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+});
+
+
+
 (function ($) {
     "use strict";
 
