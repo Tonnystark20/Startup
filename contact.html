@@ -211,11 +211,11 @@
                                 <h3 class="mb-0">Fill your details</h3>
                             </div>
                         </div>
-                    <form action="https://formspree.io/f/mbjelpjg" method="post" >
+                    <form id="enquiryform" >
                         <div class="row g-3">
                             <div class="col-md-6">
                                 
-                                <input type="text" name="Name" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="block-size: 55px;" required>
+                                <input type="text" id="name" name="Name" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="block-size: 55px;" required>
                             </div>
                             <div class="col-md-6">
                                 <input type="email"  id="email"name= "Email"class="form-control border-0 bg-light px-4" placeholder=" Email@gmail.com" style="block-size: 55px;" required>
@@ -225,15 +225,17 @@
 
                             </div>
                             <div class="col-12">
-                                <input type="text" name="Subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="block-size: 55px;" required>
+                                <input type="text" id="service" name="Subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="block-size: 55px;" required>
                             </div>
 
                             <div class="col-12">
-                                <textarea class="form-control border-0 bg-light px-4 py-3" name= "Message" rows="8" placeholder=" Enquiry Message" required></textarea >
+                                <textarea id="messages"class="form-control border-0 bg-light px-4 py-3" name= "Message" rows="8" placeholder=" Enquiry Message" required></textarea >
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
                             </div>
+                            <div class="alert">  SuccessFully Submited&#128521;</div>
+
                         </div>
                     </form>
                 </div>
@@ -389,8 +391,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>

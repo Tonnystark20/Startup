@@ -330,10 +330,10 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form action="https://formspree.io/f/mbjelpjg" method="post">
+                        <form id="enquiryform">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" name= "Name" class="form-control bg-light border-0" placeholder="Your Name" style="block-size: 55px;" required>
+                                    <input type="text" id="name" name= "Name" class="form-control bg-light border-0" placeholder="Your Name" style="block-size: 55px;" required>
                                 </div>
                                 <div class="col-12">
                                     <input type="email" id="email" name="Email" class="form-control bg-light border-0" placeholder=" Email@gmail.com" style="block-size: 55px;" required>
@@ -342,7 +342,7 @@
                                     <input type="tel" id="phone" name="phone" class="form-control bg-light border-0" placeholder="0720000000"Your Phone Number" style="block-size: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="block-size: 55px;" name="Service" required>
+                                    <select id="service"class="form-select bg-light border-0" style="block-size: 55px;" name="Service" required>
                                         <option selected>Select A Service</option>
                                         <option value="Consultation">Consultation</option>
                                         <option value="Training"> Training </option>
@@ -351,11 +351,13 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="Message" class="form-control bg-light border-0" rows="4" placeholder="Enquiry Message" required></textarea>
+                                    <textarea id="messages" name="Message" class="form-control bg-light border-0" rows="4" placeholder="Enquiry Message" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
                                 </div>
+                                <div class="alert">  SuccessFully Submited&#128521;</div>
+
                             </div>
                         </form>
                     </div>
@@ -578,8 +580,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>

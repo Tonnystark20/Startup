@@ -169,9 +169,59 @@ function validateEmail(inputText) {
 }
 
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAsySMwcg_3NW62O6YiZG9P0umzZHUFES8",
+    authDomain: "quick-enquiry.firebaseapp.com",
+    databaseURL: "https://quick-enquiry-default-rtdb.firebaseio.com",
+    projectId: "quick-enquiry",
+    storageBucket: "quick-enquiry.appspot.com",
+    messagingSenderId: "213943008028",
+    appId: "1:213943008028:web:c82a4d7f78cd77a8add8d9"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//reference yourdatabase
+var enquiryFormDB = firebase.database().ref('AfrobetaEnquiryForm');
+document.getElementById("enquiryform").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    var name = getElementVal('name');
+    var emailid = getElementVal('email');
+    var phoneNumber = getElementVal('phone');
+    var serviceid = getElementVal('service');
+    var messageContent = getElementVal('messages');
+    saveMessages(name, emailid, phoneNumber, serviceid, messageContent);
+    //   enable alert
+    document.querySelector(".alert").style.display = "block";
+
+    //   remove the alert
+    setTimeout(() => {
+        document.querySelector(".alert").style.display = "none";
+    }, 3000);
+
+    //   reset the form
+    document.getElementById("enquiryform").reset();
+}
 
 
-
+const saveMessages = (name, emailid, phoneNumber, serviceid, messageContent) => {
+    var newEnquiryForm = enquiryFormDB.push();
+    newEnquiryForm.set({
+        name: name,
+        emailid: emailid,
+        phoneNumber: phoneNumber,
+        serviceid: serviceid,
+        messageContent: messageContent,
+    });
+};
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+}
+//suggestion search
 const data = [
     { name: "AfroBeta Consult", url: "about.html" },
     { name: "Offices", url: "contact.html#location" },

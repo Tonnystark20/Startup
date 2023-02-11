@@ -356,8 +356,15 @@ h6,
     }
 }
 
-
-
+.alert {
+    width: 100%;
+    font-family: 'Nunito';
+    color: var(--dark);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    display: none;
+}
 
 #header-carousel .carousel-caption {
     top: 0;
