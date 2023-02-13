@@ -556,7 +556,7 @@ h6,
     position: relative;
     inline-size: 100%;
     padding: 0;
-    text-align: center;
+    text-align: justify;
     background: rgba(0, 0, 0, .07);
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
     transition: .5s;
