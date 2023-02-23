@@ -1,4 +1,6 @@
 /********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
 :root {
     --primary: #06A3DA;
     --secondary: #34AD54;
@@ -890,14 +892,16 @@ h6,
 }
 
 .swiper {
-    width: 50%;
+    width: 600px;
     padding-top: 50px;
     padding-bottom: 50px;
+    justify-content: center;
 }
 
 .swiper-slide {
     background-position: center;
-    background-size: cover;
+    display: flex;
+    /* Add this line to make the container a flex container */
     width: 600px;
     height: 500px;
     justify-content: center;
@@ -910,6 +914,8 @@ h6,
     height: 500px;
     object-fit: cover;
     filter: saturate(0.3);
+    overflow: hidden;
+    position: relative;
 
 
 
@@ -918,32 +924,46 @@ h6,
 .swiper-slide-active img {
     filter: saturate(1);
 
+
+}
+
+.swiper-slide {
+    position: relative;
 }
 
 .slider-text {
+    display: none;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    font-size: 20px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+
+
+    /* Set the height to inherit */
+
+    transition: color 0.3s ease-in-out;
+    /* Add transition effect for color change */
+}
+
+
+
+.swiper-slide:hover .slider-text {
+    display: block;
+    height: 100%;
+    font-size: 2vw;
+    color: #DDDDDD;
+    align-items: center;
     text-align: center;
-    color: #ffffff;
-    background: rgba(0, 0, 0, .7);
-
-    line-height: 20px;
-    justify-content: center;
-    gap: .5rem;
-    font-family: 'EB Garamond', Georgia, serif;
-    transform: translate3d(-50%, 100%, 0);
-    opacity: 0;
-    transition: all .3s ease-in-out;
+    position: absolute;
+    font-family: 'Damion', cursive, 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans;
 
 }
 
-.swiper-slide:hover .slider-text,
-.swiper-slide.swiper-slide-active .slider-text {
-    transform: translate3d(-50%, 0, 0);
-    opacity: 1;
-}
+
 
 
 
@@ -967,12 +987,27 @@ h6,
 
     }
 
+
+
+    .swiper-slide:hover .slider-text {
+        display: block;
+        height: 100%;
+        font-size: 2vw;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #DDDDDD;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        font-family: 'Damion', cursive, 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans;
+
+    }
+
     .swiper-slide-active img {
+
         filter: saturate(1);
         border-radius: 0;
         width: 100%;
         padding: 0;
 
-        box-shadow: 0 30px 45px rgba(255, 255, 255, 0.3);
     }
 }
