@@ -906,12 +906,15 @@ h6,
     height: 500px;
     justify-content: center;
     align-items: center;
+
+
 }
 
 .swiper-slide img {
     display: block;
     width: 600px;
     height: 500px;
+    border-radius: 10%;
     object-fit: cover;
     filter: saturate(0.3);
     overflow: hidden;
@@ -952,6 +955,7 @@ h6,
 
 
 .swiper-slide:hover .slider-text {
+    border-radius: 10%;
     display: block;
     height: 100%;
     font-size: 2vw;
@@ -991,6 +995,7 @@ h6,
 
     .swiper-slide:hover .slider-text {
         display: block;
+        border-radius: 0%;
         height: 100%;
         font-size: 2vw;
         background-color: rgba(0, 0, 0, 0.75);
