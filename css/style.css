@@ -1,5 +1,6 @@
 /********** Template CSS **********/
 @import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: #06A3DA;
@@ -737,6 +738,7 @@ h6,
     width: 30px;
     background: var(--dark);
     border-radius: 100px 10px 100px 10px;
+
 }
 
 .testimonial-carousel .owl-item.center {
@@ -759,7 +761,7 @@ h6,
     /* box-shadow: 0 0 30px #DDDDDD; */
     box-shadow: 0 0 45px rgba(0, 0, 0, .3);
     border-radius: 100px 10px 100px 10px;
-
+    color: #FFFFFF;
 }
 
 
